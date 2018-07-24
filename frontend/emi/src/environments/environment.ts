@@ -2,8 +2,8 @@ export const environment = {
     "production": false,
     "hmr": false,
     "keycloak": {
-        "url": "https://dev-tpm.nebulae.com.co/auth",
-        "realm": "DEV_TPM",
+        "url": "https://dev-pyxis.nebulae.com.co/auth",
+        "realm": "DEV_PYXIS",
         "clientId": "EMI",
         "onLoad": "login-required",
         "checkLoginIframe": false,
@@ -14,9 +14,9 @@ export const environment = {
     "api": {
         "gateway": {
             "graphql": {
-                "httpEndPoint": "https://dev-iot.nebulae.com.co/api/gateway/graphql/http",
-                "wsEndPoint": "wss://dev-iot.nebulae.com.co/api/gateway/graphql/ws",
-                "graphiqlEndPoint": "https://dev-iot.nebulae.com.co/api/gateway/graphiql"
+                "httpEndPoint": "https://dev-pyxis.nebulae.com.co/api/gateway/graphql/http",
+                "wsEndPoint": "wss://dev-pyxis.nebulae.com.co/api/gateway/graphql/ws",
+                "graphiqlEndPoint": "https://dev-pyxis.nebulae.com.co/api/gateway/graphiql"
             }
         }
     }
