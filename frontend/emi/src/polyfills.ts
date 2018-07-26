@@ -78,3 +78,5 @@ if ( typeof SVGElement.prototype.contains === 'undefined' )
 {
     SVGElement.prototype.contains = HTMLDivElement.prototype.contains;
 }
+
+(window as any).global = window;
