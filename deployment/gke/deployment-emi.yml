@@ -27,7 +27,7 @@ spec:
     spec:
       containers:
       - name: frontend-emi
-        image: nebulaepyxis/emi:0.0.5
+        image: nebulaepyxis/emi:0.0.6
         imagePullPolicy: Always
         ports:
         - containerPort: 80
