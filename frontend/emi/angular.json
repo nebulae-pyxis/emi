@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "fuse2": {
+    "pyxis": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -75,34 +75,35 @@
                   "replace": "src/environments/environment.ts",
                   "with": "src/environments/environment.prod.ts"
                 }
-              ]
+              ],
+              "serviceWorker": true
             }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "fuse2:build"
+            "browserTarget": "pyxis:build"
           },
           "configurations": {
             "local": {
-              "browserTarget": "fuse2:build:local"
+              "browserTarget": "pyxis:build:local"
             },
             "hmr": {
-              "browserTarget": "fuse2:build:hmr"
+              "browserTarget": "pyxis:build:hmr"
             },
             "staging": {
-              "browserTarget": "fuse2:build:staging"
+              "browserTarget": "pyxis:build:staging"
             },
             "production": {
-              "browserTarget": "fuse2:build:production"
+              "browserTarget": "pyxis:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "fuse2:build"
+            "browserTarget": "pyxis:build"
           }
         },
         "test": {
@@ -138,7 +139,7 @@
         }
       }
     },
-    "fuse2-e2e": {
+    "pyxis-e2e": {
       "root": "e2e",
       "sourceRoot": "e2e",
       "projectType": "application",
@@ -147,7 +148,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "./protractor.conf.js",
-            "devServerTarget": "fuse2:serve"
+            "devServerTarget": "pyxis:serve"
           }
         },
         "lint": {
@@ -166,7 +167,7 @@
       }
     }
   },
-  "defaultProject": "fuse2",
+  "defaultProject": "pyxis",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",
