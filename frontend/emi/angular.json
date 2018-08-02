@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "pyxis": {
+    "emi": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -19,7 +19,8 @@
             "polyfills": "src/polyfills.ts",
             "assets": [
               "src/assets",
-              "src/favicon.ico"
+              "src/favicon.ico",
+              "src/manifest.json"
             ],
             "styles": [
               "src/styles.scss"
@@ -83,27 +84,27 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "pyxis:build"
+            "browserTarget": "emi:build"
           },
           "configurations": {
             "local": {
-              "browserTarget": "pyxis:build:local"
+              "browserTarget": "emi:build:local"
             },
             "hmr": {
-              "browserTarget": "pyxis:build:hmr"
+              "browserTarget": "emi:build:hmr"
             },
             "staging": {
-              "browserTarget": "pyxis:build:staging"
+              "browserTarget": "emi:build:staging"
             },
             "production": {
-              "browserTarget": "pyxis:build:production"
+              "browserTarget": "emi:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "pyxis:build"
+            "browserTarget": "emi:build"
           }
         },
         "test": {
@@ -119,7 +120,8 @@
             ],
             "assets": [
               "src/assets",
-              "src/favicon.ico"
+              "src/favicon.ico",
+              "src/manifest.json"
             ]
           }
         },
@@ -139,8 +141,8 @@
         }
       }
     },
-    "pyxis-e2e": {
-      "root": "e2e",
+    "emi-e2e": {
+      "root": "",
       "sourceRoot": "e2e",
       "projectType": "application",
       "architect": {
@@ -148,7 +150,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "./protractor.conf.js",
-            "devServerTarget": "pyxis:serve"
+            "devServerTarget": "emi:serve"
           }
         },
         "lint": {
@@ -167,7 +169,7 @@
       }
     }
   },
-  "defaultProject": "pyxis",
+  "defaultProject": "emi",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",
