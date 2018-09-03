@@ -91,8 +91,14 @@ export class FuseToolbarComponent {
 
   async ngOnInit() {
     this.userDetails = await this.keycloakService.loadUserProfile();
-    const keycloakLanguage = this.languages ? this.languages
-      .filter(lang => (lang.id === (this.userDetails as any).attributes.locale[0]))[0] : 'es';
+    const keycloakLanguageList = this.languages
+      .filter(lang => {
+        return ((this.userDetails as any).attributes.locale && lang.id === (this.userDetails as any).attributes.locale[0]);
+      });
+    let keycloakLanguage = 'es';
+    if (keycloakLanguageList && keycloakLanguageList.lenght > 0) {
+      keycloakLanguage = keycloakLanguageList[0];
+    }
     this.selectedLanguage = keycloakLanguage ? keycloakLanguage : this.selectedLanguage;
     this.translate.use(this.selectedLanguage.id);
     this.userRoles = this.keycloakService.getUserRoles(true);
