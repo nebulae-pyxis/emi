@@ -37,7 +37,7 @@ gulp.task('updateRepoFiles', ()=> {
 // update from src to dev
 gulp.task('updateDevelpmentFiles', ()=> {
     if( (Date.now() - LAST_SYNC_TIMESTAMP) >= DEBOUNCE_TIME){
-        console.log('################ UPDATING DEVELOPMENT FOLDER ################');
+        console.log('############### UPDATING DEVELOPMENT FOLDER ###############');
         LAST_SYNC_TIMESTAMP = Date.now();
         return gulp.src(`${paths.srcFolder}/**/*`)
         .pipe(gulp.dest(`src/app/main/content`));
