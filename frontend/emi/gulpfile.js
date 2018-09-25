@@ -24,7 +24,7 @@ gulp.task('dev-sync-source', () => {
 // update from dev to src
 gulp.task('updateRepoFiles', ()=> {
     if( (Date.now() - LAST_SYNC_TIMESTAMP) >= DEBOUNCE_TIME){
-    console.log('################### UPDATING SRC FOLDER ###################');
+    console.log('#################### UPDATING SRC FOLDER ###################');
     LAST_SYNC_TIMESTAMP = Date.now();
     return gulp.src([
         `${paths.devFolder}/**/*`,
