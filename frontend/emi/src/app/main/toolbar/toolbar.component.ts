@@ -98,13 +98,11 @@ export class FuseToolbarComponent {
   // tslint:disable-next-line:use-life-cycle-interface
   async ngOnInit() {
     this.userDetails = await this.keycloakService.loadUserProfile();
-    const userLanguage = this.userDetails['attributes']['locale'] ? this.userDetails['attributes']['locale'][0] : 'es';
-    const languageIndex = this.languages.findIndex(lang => lang.id === userLanguage);
-    this.selectedLanguage = (languageIndex !== -1 )
-    ? this.languages[languageIndex]
-    : this.languages[0];
+    const userLanguage = this.userDetails['attributes']['locale'] || 'es';
+    console.log('userDetails => ', this.userDetails, ' --- userLanguage => ', userLanguage);
+    const language = this.languages.find(lang => lang.id === userLanguage);
+    this.setLanguage(language || this.languages[0]);
 
-    this.translate.use(this.selectedLanguage.id);
     this.userRoles = this.keycloakService.getUserRoles(true);
   }
 
