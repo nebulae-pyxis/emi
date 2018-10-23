@@ -97,20 +97,20 @@ export class FuseToolbarComponent {
 
   // tslint:disable-next-line:use-life-cycle-interface
   async ngOnInit() {
-    // this.userDetails = await this.keycloakService.loadUserProfile();
-    // const userLanguage = this.userDetails['attributes']['locale'] || 'es';
-    // console.log('userDetails => ', this.userDetails, ' --- userLanguage => ', userLanguage);
-    // const language = this.languages.find(lang => lang.id === userLanguage);
-    // this.setLanguage(language || this.languages[0]);
-
-    // this.userRoles = this.keycloakService.getUserRoles(true);
-
     this.userDetails = await this.keycloakService.loadUserProfile();
-    const keycloakLanguage = this.languages
-      .filter(lang => (lang.id === (this.userDetails as any).attributes.locale[0]))[0];
-    this.selectedLanguage = keycloakLanguage ? keycloakLanguage : this.selectedLanguage;
-    this.translate.use(this.selectedLanguage.id);
+    const userLanguage = this.userDetails['attributes']['locale'] || 'es';
+    // console.log('userDetails => ', this.userDetails, ' --- userLanguage => ', userLanguage);
+    const language = this.languages.find(lang => lang.id === userLanguage);
+    this.setLanguage(language || this.languages[0]);
+
     this.userRoles = this.keycloakService.getUserRoles(true);
+
+    // this.userDetails = await this.keycloakService.loadUserProfile();
+    // const keycloakLanguage = this.languages
+    //   .filter(lang => (lang.id === (this.userDetails as any).attributes.locale[0]))[0];
+    // this.selectedLanguage = keycloakLanguage ? keycloakLanguage : this.selectedLanguage;
+    // this.translate.use(this.selectedLanguage.id);
+    // this.userRoles = this.keycloakService.getUserRoles(true);
   }
 
   logout() {
