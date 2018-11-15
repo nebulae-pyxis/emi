@@ -123,7 +123,7 @@ export class FuseToolbarComponent {
   }
 
   setLanguage(lang) {
-    console.log('lang', lang);
+    // console.log('lang', lang);
     // Set the selected language for toolbar
     this.selectedLanguage = lang;
 

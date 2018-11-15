@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { MatDatepickerModule , MatMomentDateModule } from '@coachcare/datepicker';
 import {
     MatAutocompleteModule,
     MatButtonModule,
@@ -8,7 +9,7 @@ import {
     MatTooltipModule,
     MatCardModule,
     MatChipsModule,
-    MatDatepickerModule,
+    // MatDatepickerModule,
     MatDialogModule,
     MatExpansionModule,
     MatFormFieldModule,
@@ -39,13 +40,15 @@ import { CdkTableModule } from '@angular/cdk/table';
 
 @NgModule({
     imports: [
+        MatDatepickerModule,
+        MatMomentDateModule,
         MatAutocompleteModule,
         MatButtonModule,
         MatButtonToggleModule,
         MatCardModule,
         MatCheckboxModule,
         MatChipsModule,
-        MatDatepickerModule,
+        // MatDatepickerModule,
         MatDialogModule,
         MatExpansionModule,
         MatFormFieldModule,
@@ -82,7 +85,7 @@ import { CdkTableModule } from '@angular/cdk/table';
         MatCardModule,
         MatCheckboxModule,
         MatChipsModule,
-        MatDatepickerModule,
+        // MatDatepickerModule,
         MatDialogModule,
         MatExpansionModule,
         MatGridListModule,
