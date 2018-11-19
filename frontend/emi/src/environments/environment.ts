@@ -14,9 +14,9 @@ export const environment = {
     "api": {
         "gateway": {
             "graphql": {
-                "httpEndPoint": "https://dev-pyxis.nebulae.com.co/api/gateway/graphql/http",
-                "wsEndPoint": "wss://dev-pyxis.nebulae.com.co/api/gateway/graphql/ws",
-                "graphiqlEndPoint": "https://dev-pyxis.nebulae.com.co/api/gateway/graphiql"
+                "httpEndPoint": "https://dev-pyxis.nebulae.com.co/api/emi-gateway/graphql/http",
+                "wsEndPoint": "wss://dev-pyxis.nebulae.com.co/api/emi-gateway/graphql/ws",
+                "graphiqlEndPoint": "https://dev-pyxis.nebulae.com.co/api/emi-gateway/graphiql"
             }
         }
     }
