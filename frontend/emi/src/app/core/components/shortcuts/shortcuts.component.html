@@ -1,13 +1,13 @@
 <div id="fuse-shortcuts" #shortcuts>
 
-    <div class="shortcuts-mobile-toggle" *ngIf="!mobileShortcutsPanelActive" fxLayout="row" fxLayoutAlign="start center"
-         fxHide fxShow.lt-md>
+    <div class="shortcuts-mobile-toggle" *ngIf="!mobileShortcutsPanelActive"
+      fxLayout="row" fxLayoutAlign="start center" fxHide fxShow.lt-md>
         <button mat-icon-button (click)="showMobileShortcutsPanel()">
             <mat-icon class="amber-600-fg">star</mat-icon>
         </button>
     </div>
 
-    <div class="shortcuts" fxHide fxShow.gt-sm [ngClass]="toolbarColor">
+    <div fxShow fxHide.lt-md class="shortcuts"  [ngClass]="toolbarColor">
 
         <div fxLayout="row" fxLayoutAlign="space-between center" fxFlex="0 1 auto">
 
