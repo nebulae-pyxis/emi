@@ -20,10 +20,12 @@
             "assets": [
               "src/assets",
               "src/favicon.ico",
-              "src/manifest.json"
+              "src/manifest.json",
+              "src/assets/civica-card-reload-pos/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/civica-card-reload-pos/styles.css"
             ],
             "scripts": [{"input":"src/assets/civica-card-reload-pos/afcc-reloader.js","lazy":true}]
           },
