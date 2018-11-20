@@ -25,7 +25,7 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": ["src/assets/civica-card-reload-pos/afcc-reloader.js"]
           },
           "configurations": {
             "local": {
