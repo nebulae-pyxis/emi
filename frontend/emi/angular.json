@@ -114,7 +114,7 @@
             "karmaConfig": "./karma.conf.js",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.spec.json",
-            "scripts": [],
+            "scripts": ["src/assets/civica-card-reload-pos/afcc-reloader.js"],
             "styles": [
               "src/styles.scss"
             ],
