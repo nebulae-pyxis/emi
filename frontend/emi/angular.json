@@ -20,16 +20,12 @@
             "assets": [
               "src/assets",
               "src/favicon.ico",
-              "src/manifest.json",
-              "src/assets/civica-card-reload-pos/assets"
+              "src/manifest.json"
             ],
             "styles": [
-              "src/styles.scss",
-              "src/assets/civica-card-reload-pos/styles.css"
+              "src/styles.scss"
             ],
-            "scripts": [
-              "src/assets/civica-card-reload-pos/afcc-reloader.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "local": {
