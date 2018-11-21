@@ -24,10 +24,9 @@
               "src/assets/civica-card-reload-pos/assets"
             ],
             "styles": [
-              "src/styles.scss",
-              "src/assets/civica-card-reload-pos/styles.css"
+              "src/styles.scss"
             ],
-            "scripts": [{"input":"src/assets/civica-card-reload-pos/afcc-reloader.js","lazy":true}]
+            "scripts": []
           },
           "configurations": {
             "local": {
