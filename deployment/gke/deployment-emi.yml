@@ -27,7 +27,7 @@ spec:
     spec:
       containers:
       - name: frontend-emi
-        image: nebulaepyxis/emi:0.1.17
+        image: nebulaepyxis/emi:0.1.18
         resources:
           requests:
             cpu: "10m"
