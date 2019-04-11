@@ -49,7 +49,6 @@ export class FuseSearchBarComponent implements OnInit, OnDestroy {
     this.userRoles = this.keycloakService.getUserRoles(true);
     of(this.keycloakService.getUserRoles(true).includes('PLATFORM-ADMIN'))
       .pipe(
-        //tap(ispa => console.log('IS PLATFORM ADMIN ==> ', ispa)),
         delay(500),
         mergeMap((isSysAdmin: boolean) => isSysAdmin
           ? of({})
