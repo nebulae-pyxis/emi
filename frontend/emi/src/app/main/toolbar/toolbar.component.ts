@@ -7,6 +7,7 @@ import { KeycloakProfile } from 'keycloak-js';
 import { locale as english } from '../i18n/en';
 import { locale as spanish } from '../i18n/es';
 import { FuseTranslationLoaderService } from '../../core/services/translation-loader.service';
+import { ToolbarService } from './toolbar.service';
 
 export interface Language{
   id: string;
@@ -27,13 +28,15 @@ export class FuseToolbarComponent {
   showLoadingBar: boolean;
   horizontalNav: boolean;
   userRoles: string[] = [];
+  businessSelected: {id: string, name: string} = null;
 
   constructor(
     private router: Router,
     private fuseConfig: FuseConfigService,
     private translate: TranslateService,
     private keycloakService: KeycloakService,
-    private translationLoader: FuseTranslationLoaderService
+    private translationLoader: FuseTranslationLoaderService,
+    private toolbarService: ToolbarService
   ) {
     this.translationLoader.loadTranslations(english, spanish);
     this.userStatusOptions = [
@@ -99,27 +102,22 @@ export class FuseToolbarComponent {
   async ngOnInit() {
     this.userDetails = await this.keycloakService.loadUserProfile();
     const userLanguage = this.userDetails['attributes']['locale'] || 'es';
-    // console.log('userDetails => ', this.userDetails, ' --- userLanguage => ', userLanguage);
     const language = this.languages.find(lang => lang.id === userLanguage);
     this.setLanguage(language || this.languages[0]);
 
     this.userRoles = this.keycloakService.getUserRoles(true);
-
-    // this.userDetails = await this.keycloakService.loadUserProfile();
-    // const keycloakLanguage = this.languages
-    //   .filter(lang => (lang.id === (this.userDetails as any).attributes.locale[0]))[0];
-    // this.selectedLanguage = keycloakLanguage ? keycloakLanguage : this.selectedLanguage;
-    // this.translate.use(this.selectedLanguage.id);
-    // this.userRoles = this.keycloakService.getUserRoles(true);
   }
 
   logout() {
     this.keycloakService.logout();
   }
 
+
   search(value) {
-    // Do your search here...
-    console.log(value);
+    // console.log('Business selected ==> ', value);
+    this.businessSelected = value;
+    this.toolbarService.onSelectedBusiness$.next(value);
+
   }
 
   setLanguage(lang) {
